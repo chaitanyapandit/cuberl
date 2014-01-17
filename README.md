@@ -1,6 +1,6 @@
 # cuberl #
 
-Erlang client for Square's Cube.
+Erlang client for Square's [Cube](https://github.com/square/cube).
 
 Sends events to Cube's collector over UDP.
 
@@ -35,4 +35,8 @@ Include `cuberl.hrl`:
     -include("../deps/cuberl/include/cuberl.hrl").
 
 
+Start sending events to Cube:
 
+```shell
+cuberl:send(#cuberl_event{type = <<"hits">>, data=[{<<"value">>, 1}]}).
+```
