@@ -19,6 +19,9 @@
 -export([send/1,
 		test/0]).
 	  
+-define(CHILD(I, Type), {I, {I, start_link, []}, permanent, 5000, Type, [I]}).
+-define(record_to_proplist(Ref, Rec), lists:zip(record_info(fields, Rec),tl(tuple_to_list(Ref)))).
+
 -record(state, {
     host,
     port,
