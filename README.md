@@ -10,7 +10,7 @@ Add cuberl to your `rebar.config` deps:
 
     {cuberl, ".*", {git, "git://github.com/chaitanyapandit/cuberl.git"}}
 
-Don't forget to include 'cuberl' and 'iso8601' in your application (in the reltool.config rel section):
+Don't forget to include `cuberl` and `iso8601` in your application (in the reltool.config rel section):
 	
 	...[
 		 cuberl,
@@ -21,7 +21,7 @@ Don't forget to include 'cuberl' and 'iso8601' in your application (in the relto
 	{app, iso8601, [{incl_cond, include}]}
 
 
-Include these configuration options in your app's sys.config/app.config
+The cuberl application itself needs to be configured using the application's environment, this is generally done in `app.config` or `sys.config`.
 
 ```shell
 {cuberl, [
@@ -30,7 +30,7 @@ Include these configuration options in your app's sys.config/app.config
 ]}
 ```
 
-Include 'cuberl.hrl':
+Include `cuberl.hrl`:
 
     -include("../deps/cuberl/include/cuberl.hrl").
 
