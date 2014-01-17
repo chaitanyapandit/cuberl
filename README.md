@@ -10,17 +10,15 @@ Add cuberl to your `rebar.config` deps:
 
     {cuberl, ".*", {git, "git://github.com/chaitanyapandit/cuberl.git"}}
 
-Don't forget to include `cuberl` `jiffy` and `iso8601` in your application (in the reltool.config rel section):
+Don't forget to include `cuberl` and `jiffy` in your application (in the reltool.config rel section):
 	
 	...[
 		 cuberl,
-		 jiffy,
-		 iso8601
+		 jiffy
 		 ]...
 		 
 	{app, cuberl, [{incl_cond, include}]},
-	{app, jiffy, [{incl_cond, include}]},
-	{app, iso8601, [{incl_cond, include}]}
+	{app, jiffy, [{incl_cond, include}]}
 
 
 The cuberl application itself needs to be configured using the application's environment, this is generally done in `app.config` or `sys.config`.
