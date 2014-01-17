@@ -6,11 +6,11 @@ Sends events to Cube's collector over UDP.
 
 ## Quick Start ##
 
-Add it to your `rebar.config` deps:
+Add cuberl to your `rebar.config` deps:
 
     {cuberl, ".*", {git, "git://github.com/chaitanyapandit/cuberl.git"}}
 
-Don't foeget to include cuberl and iso8601 in your app's reltool.config:
+Don't forget to include 'cuberl' and 'iso8601' in your application (in the reltool.config rel section):
 	
 	...[
 		 cuberl,
@@ -20,6 +20,7 @@ Don't foeget to include cuberl and iso8601 in your app's reltool.config:
 	{app, cuberl, [{incl_cond, include}]},
 	{app, iso8601, [{incl_cond, include}]}
 
+
 Include these configuration options in your app's sys.config/app.config
 
 ```shell
@@ -28,5 +29,10 @@ Include these configuration options in your app's sys.config/app.config
     {port, 1180} %% UDP port
 ]}
 ```
+
+Include 'cuberl.hrl':
+
+    -include("../deps/cuberl/include/cuberl.hrl").
+
 
 
