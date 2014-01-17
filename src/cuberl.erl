@@ -128,4 +128,4 @@ is_valid(Other) ->
 %%%===================================================================
 	
 test() ->
-	send(#cuberl_event{type = <<"verbs2">>, data=[{<<"value">>, random:uniform(1000)}]}).
+	send(#cuberl_event{type = <<"cuberl">>, data=[{<<"value">>, random:uniform(1000)}]}).
