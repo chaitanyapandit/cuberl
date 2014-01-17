@@ -38,5 +38,5 @@ Include `cuberl.hrl`:
 Start sending events to Cube:
 
 ```shell
-cuberl:send(#cuberl_event{type = <<"hits">>, data=[{<<"value">>, 1}]}).
+cuberl:send(#cuberl_event{type = <<"hits">>, data = [{<<"value">>, 1}]}).
 ```
